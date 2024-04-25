@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edusavvy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            /* Your main content styles */
+        }
+
+        footer {
+            background-color: #333;
+
+            margin-top: auto;
+        }
+
+
+        #aage {
+            position: absolute;
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to bottom right, #4299e1, #1a202c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .shadow {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .ci img {
+            height: 210px;
+        }
+
+        .dark body {
+            background-color: #040913;
+            color: white;
+        }
+
+        .dark main h1 {
+            color: white;
+        }
+
+        .dark main p {
+            color: rgb(177, 177, 177);
+        }
+
+        .dark main h2 {
+            color: black;
+        }
+
+        .dark footer p {
+            color: rgb(206, 206, 206);
+        }
+        .dark footer li{
+            color: rgb(110, 110, 110);
+        }
+
+        .dark footer {
+            background-color: #01061b;
+            color: white;
+        }
+
+        #sun {
+            display: none;
+        }
+
+        .dark #moon {
+            display: none;
+        }
+
+        .dark #sun {
+            display: block;
+        }
+
+        .dark .fsection{
+            color: black;
+        }
+        
+        .dark .fsection h1{
+            color: black;
+        }
+
+        .dark .fsection p{
+            color: rgb(107, 107, 107);
+        }
+        
+        .dark #lll{
+            color: white;
+        }
+
+        .dark .msection{
+            color: black;
+        }
+
+        .dark .nichla h1{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="flex justify-between items-center px-16 py-4">
+            <div class="logo">
+                <a href="/profile"><img src="/images/logo.png" alt="" style="width: 165px;"></a>
+            </div>
+
+            <ul class="flex">
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/profile">Home</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/courses">Courses</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/feed">Feed</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/buysell">Buy & Sell</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/about">About</a></li>
+                <li class="font-semibold text-lg hover:text-blue-600"><a href="/contact">Contact Us</a></li>
+            </ul>
+
+            <div class="right flex justify-between items-center">
+
+                <button id="darkModeToggle" class="dl mr-5 text-2xl"><i id="moon" class="ri-moon-fill"></i><i
+                        class="ri-sun-fill" id="sun"></i></button>
+
+                <button class="font-semibold text-lg bg-blue-600 text-white py-2 px-3 rounded-3xl"><a
+                        href="/account">Dashboard <i class="ri-user-fill font-light"></i></a></button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="h-screen mb-10">
+        <div class="heading flex flex-col justify-center items-center mx-auto">
+            <h1 class="text-5xl mt-8 font-bold">Welcome To <span class="text-gradient">Edusavvy !</span></h1>
+            <div class="tes relative">
+                <p class="text-l font-semibold text-gray-800 mt-4">Explore our courses and start your learning journey
+                    today!</p> <img id="aage" class="-top-20 -right-20 mt-1"
+                    src="https://export-download.canva.com/OW8is/DAGCzPOW8is/24/0/0001-3525617903568677964.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20240418%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240418T161308Z&X-Amz-Expires=23427&X-Amz-Signature=107f6911717597c648e65cab5b703b3c383f3ac660e22077b825f7fe416518d7&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Thu%2C%2018%20Apr%202024%2022%3A43%3A35%20GMT"
+                    alt="" width="320px">
+            </div>
+            <div class="box relative flex mt-5 font-bold">
+                <input type="search" placeholder="Search Courses..."
+                    class="border-2 border-gray-300 text-gradient focus:outline-none focus:border-blue-700 rounded-3xl px-6 py-1 w-full bg-transparent">
+                <i class="ri-search-line absolute right-0 p-1 mr-2 text-gradient text-xl font-semibold"></i>
+            </div>
+        </div>
+
+        <div class="fsection mt-5">
+
+            <div class="fheading">
+                <h1 id="lll" class="text-2xl ml-20 p-1 font-semibold mb-5">Courses <span class="text-gradient">Coming Soon
+                        !</span>
+                </h1>
+            </div>
+
+            <div class="shadow bg-gray-200 featured flex flex-row justify-between items-center bg-white p-8 rounded-xl mx-auto"
+                style="width: 90%;">
+                <div class="cimg w-1/3"><img
+                        src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/339165862/original/7037b215bc2c5a1778cc27301adfd926c55edc0a/be-react-native-app-developer-react-native-developer-for-react-native-mobile-app.png"
+                        alt="" class="rounded-lg"></div>
+                <div class="dess w-1/2 flex flex-col ">
+                    <div class="btns mb-2">
+                        <button
+                            class="bg-gradient-to-br from-purple-600 to-pink-700 text-white px-2 rounded-xl mr-2 font-medium"
+                            style="padding-bottom: 1px;">Instagram</button>
+                        <button class="bg-red-700 text-white px-2 py-0 rounded-xl"
+                            style="padding-bottom: 1px;">Youtube</button>
+                    </div>
+                    <h1 class="mb-2 text-2xl font-bold">Comprehensive React Native App Development</h1>
+                    <p class="mb-4 text-l font-light">Build cross-platform mobile applications with React Native. Learn
+                        to set up your development environment, create user interfaces, manage state, integrate native
+                        device features, and deploy apps to app stores.</p>
+                    <div class="below flex items-center">
+                        <div class="soc flex items-center">
+                            <div class="like mr-3 text-2xl"><i class="ri-heart-3-line"></i></div>
+                            <div class="share text-2xl" onclick="shareCard('http://localhost:3000/courses')"><i class="ri-share-forward-line" style="cursor: pointer;"></i></div>
+                        </div>
+                        <div class="teacher flex items-center ml-8">
+                            <img class="rounded-full"
+                                src="https://yt3.googleusercontent.com/RDwJjyzPnyP7H9QhjgV1ozD178Hqk-BeJ2aYPqLaVPcYBFHOFeY3a0GpGEjwIOwpaConl6PH2g=s900-c-k-c0x00ffffff-no-rj"
+                                alt="" width="28px">
+                            <div class="name ml-1">Uday Sharma</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebtn">
+                    <button
+                        class="bg-gradient-to-br from-blue-700 to-blue-400 text-white p-2 rounded-lg font-semibold">Learn
+                        More!</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="msection mt-12">
+
+            <div class="mheading ml-1">
+                <h1 class="text-2xl ml-20 p-1 font-semibold mb-5 flex">All<span class="text-gradient flex ml-2">Courses
+                        <i class="ri-braces-line" style="font-size: 30px; transform: translateY(3px);"></i></span></h1>
+            </div>
+
+            <div class="ac grid grid-cols-3 gap-10 px-20 mt-10">
+                <div class="bg-gray-200 rounded-lg">
+                    <div class="ci">
+                        <img class="w-full rounded-lg" src="/images/rthumb.jpg" alt="">
+                    </div>
+
+                    <div class="nichla p-2">
+                        <div class="one flex items-center ml-2 mt-2">
+                            <div class="price text-lg mr-6 font-semibold text-gradient">₹0</div>
+                            <div class="field text-l mr-4 font-medium bg-blue-700 text-white rounded-xl px-3 py-0 ">
+                                All</div>
+                            <div class="status text-l mr-4 font-medium bg-red-700 text-white rounded-xl px-3 py-0 ">
+                                Free</div>
+                            <div class="status text-l mr-4 font-medium bg-green-600 text-white rounded-xl px-3 py-0 ">
+                                <i class="ri-download-cloud-2-line"></i> Free Word file
+                            </div>
+                        </div>
+                        <h1 class="ml-2 mt-3 text-xl font-semibold">Crafting Dynamic Resumes that Land Interviews and
+                            Propel Careers Forward</h1>
+
+                        <div class="two flex items-center justify-between p-2 mt-2">
+                            <a href="/courses/resume"><button
+                                    class="bg-gradient-to-br from-blue-700 to-blue-400 rounded-lg text-white p-2 mr-7 font-semibold">Start
+                                    Learning!</button></a>
+                            <div class="other flex mr-1">
+                                <div class="like"><i class="ri-heart-3-line text-2xl font-medium mr-2"></i></div>
+                                <div class="share"><i class="ri-share-forward-line text-2xl font-medium cursor-pointer"  onclick="shareCard('http://localhost:3000/courses/resume')"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bg-gray-200 rounded-lg">
+                    <div class="ci">
+                        <img class="w-full rounded-lg" src="/images/gthumb.jpg" alt="">
+                    </div>
+
+                    <div class="nichla p-2">
+                        <div class="one flex items-center ml-2 mt-2">
+                            <div class="price text-lg mr-6 font-semibold text-gradient">₹0</div>
+                            <div class="field text-l mr-4 font-medium bg-blue-700 text-white rounded-xl px-3 py-0 ">
+                                All</div>
+                            <div class="status text-l mr-4 font-medium bg-red-700 text-white rounded-xl px-3 py-0 ">
+                                Free</div>
+                            <div class="status text-l mr-4 font-medium bg-green-600 text-white rounded-xl px-3 py-0 ">
+                                <i class="ri-download-cloud-2-line"></i> Free Readme
+                            </div>
+                        </div>
+                        <h1 class="ml-2 mt-3 text-xl font-semibold">Mastering Git and GitHub: The Version Control and
+                            Collaboration Essentials</h1>
+
+                        <div class="two flex items-center justify-between p-2 mt-2">
+                            <a href="/courses/github"><button
+                                    class="bg-gradient-to-br from-blue-700 to-blue-400 rounded-lg text-white p-2 mr-7 font-semibold">Start
+                                    Learning!</button></a>
+                            <div class="other flex mr-1">
+                                <div class="like"><i class="ri-heart-3-line text-2xl font-medium mr-2"></i></div>
+                                <div class="share"><i class="ri-share-forward-line text-2xl font-medium cursor-pointer" onclick="shareCard('http://localhost:3000/courses/github')"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="div">
+                    <a href="/error"><img src="/images/image-removebg-preview_(73)-transformed.png" alt=""
+                            style="scale: 1.03;"></a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <footer class="bg-white flex flex-row items-center px-24 pb-20 pt-12 justify-between">
+        <div class="mt-3">
+            <img class="-ml-6" src="/images/logo.png" alt="" width="220px">
+            <div class="botm">
+                <p class="text-gray-600 mt-5">© Edusavvy - Empowering Education</p>
+                <p class="text-gray-600"><a href="">Terms Of Service</a> | <a href="">Privacy Policy</a></p>
+            </div>
+        </div>
+        <div>
+            <h1 class="text-xl font-bold mb-3 mt-14">Services</h1>
+            <ul>
+                <li class="text-gray-600 mb-1">Courses</li>
+                <li class="text-gray-600 mb-1">Buy & Sell</li>
+                <li class="text-gray-600 mb-1">Notes</li>
+                <li class="text-gray-600 mb-1">Study Material</li>
+            </ul>
+        </div>
+        <div>
+            <h1 class="text-xl font-bold mb-3 mt-14  mr-6">About Us</h1>
+            <ul class="-mb-1">
+                <li class="text-gray-600 mb-1">Who are we?</li>
+                <li class="text-gray-600 mb-1">About</li>
+                <li class="text-gray-600 mb-1">Career</li>
+                <li class="text-gray-600 mb-1">Contact us</li>
+            </ul>
+        </div>
+        <div>
+            <h1 class="text-xl font-bold mb-3 mt-8">Account</h1>
+            <ul class="-mb-1">
+                <li class="text-gray-600 mb-1">Dashboard</li>
+                <li class="text-gray-600 mb-1">Feed</li>
+                <li class="text-gray-600 mb-1">Users</li>
+            </ul>
+        </div>
+        <div>
+            <div class="ending mt-4">
+                <h1 class="text-xl font-bold mb-3">Get in touch</h1>
+                <p class="text-gray-600 mb-1">Questions or feedback? <br> we'd love to hear from you</p>
+            </div>
+            <div class="socials mt-7 -mb-12">
+                <i class="ri-youtube-fill text-2xl mr-2"></i>
+                <i class="ri-instagram-fill text-2xl mr-2"></i>
+                <i class="ri-twitter-x-line text-2xl mr-2"></i>
+                <i class="ri-facebook-circle-fill text-2xl mr-2"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            const html = document.documentElement;
+
+            // Toggle the 'dark' class on the <html> element
+            html.classList.toggle('dark');
+
+            // Save the user's preference in localStorage
+            const isDarkMode = html.classList.contains('dark');
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Check if the user has a dark mode preference saved in localStorage
+        const savedDarkMode = localStorage.getItem('darkMode');
+        if (savedDarkMode === 'true') {
+            document.documentElement.classList.add('dark');
+        }
+
+
+        function shareCard(cardLink) {
+        navigator.clipboard.writeText(cardLink).then(function() {
+            alert('Link copied to clipboard!');
+        }, function() {
+            alert('Failed to copy link to clipboard.');
+        });
+    }
+    </script>
+</body>
+
+</html>

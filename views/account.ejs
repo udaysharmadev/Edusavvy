@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edusavvy</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<style>
+body{
+  background-color: #f7f7f7;
+}
+</style>
+
+
+
+
+<body>
+
+  <div class="container flex flex-row items-center justify-between px-20 py-8 mr-7 ml-8 mt-3 mb-7">
+
+    
+    
+    <div class="profile flex flex-col bg-white rounded-lg shadow-md p-6 w-2/3 mr-10">
+      <div class="flex items-center justify-between">
+        <a href="/profile" class="button bg-transparent hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          <i class="ri-menu-2-line"></i>
+        </a>
+        <a href="/logout" class="button bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">Logout</a>
+      </div>
+    
+      <div class="flex flex-col items-center mt-4 space-y-2">
+        <div class="photu">
+        <img src="/images/uploads/<%= user.profileimage %>" class="rounded-full w-24 h-24 object-cover border border-gray-300 bg-gray-100"></div>
+        <h2 class="name text-2xl font-bold text-gray-800">
+          <%= user.fullName %>
+        </h2>
+        <p class="username text-lg text-gray-600">
+          @<%= user.username %>
+        </p>
+        <p class="bio text-gray-600 text-sm">
+          <%= user.bio %>
+        </p>
+      </div>
+    
+      <div class="flex justify-center mt-4">
+        <a href="/profile/edit" class="button bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Edit Profile</a>
+      </div>
+    </div>
+    
+    
+    
+
+
+
+
+    <div
+      class="flex flex-col items-center space-y-4 bg-blue-500 text-white rounded-lg shadow-md p-5 w-1/3">
+      <p class="description text-2xl font-bold -mb-3">Make a post </p>
+      <br />
+      <form action="/upload" method="post" enctype="multipart/form-data" class="flex flex-col space-y-2 ">
+        <div class="dono flex flex-col items-center p-4">
+          <input type="text" name="filecaption" placeholder="Write Some Caption"
+            class="border border-gray-200 rounded text-black px-3 py-1 w-4/3 focus:outline-none focus:ring-2 focus:ring-blue-300 mb-4" />
+          <input type="number" name="fileprice" placeholder="Write Selling Price"
+            class="border border-gray-200 rounded text-black px-3 py-1 w-4/3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+        </div>
+        <div class="div flex flex-col mb-10 justify-center items-center align-center">
+          <label for="file-input" class="cursor-pointer block mb-2 mx-auto font-semibold">
+            Choose File 👇
+          </label>
+          <div class="kb ml-20"><input type="file" id="file-input" name="file" class="mb-8" /></div>
+        </div>
+
+        <button type="submit"
+          class="w-1/2 mx-auto button bg-white text-blue-500 hover:text-blue-800 px-4 py-2 rounded font-semibold">Upload</button>
+      </form>
+    </div>
+
+
+
+  </div>
+
+
+
+  
+
+  <div class="card-container flex flex-wrap justify-center gap-8 px-20 mt-10">
+    <% user.posts.reverse().forEach(function(post){ %>
+      <div class="card bg-white object-cover p-2 rounded-lg shadow-md overflow-hidden w-64 h-auto">  <img src="/images/uploads/<%= post.image %>" class="w-full h-48 object-contain" alt="<%= post.imageText %>">
+        <div class="card-content p-4 flex flex-col justify-between">
+          <h5 class="card-title text-xl font-bold text-gray-800 line-clamp-2">  <%= post.imageText %>
+          </h5>
+          <div class="flex justify-between items-center mt-4">
+            <a href="/post/<%= post._id %>" class="button bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">View Details</a>
+            <span class="text-gray-500 text-base">₹<%= post.price %></span>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  
+
+</body>
+
+</html>

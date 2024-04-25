@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="cursor-follower" style="width: 8px; height: 8px;"></div>
+
+    <script>const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const mouseX = clientX - cursorFollower.clientWidth / 2;
+            const mouseY = clientY - cursorFollower.clientHeight / 2;
+            cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+        
+        document.addEventListener('mouseover', (e) => {
+            cursorFollower.classList.remove('hidden');
+        });
+        
+        document.addEventListener('mouseout', (e) => {
+            cursorFollower.classList.add('hidden');
+        });
+        </script>
+
+        
+    <header id="top" style="height: 100px; background-color: white; color: black; text-align: center;">
+        <div class="top-bar">
+            <div class="photo" style="transform: translate(40px,18px);"><img
+                    src="/images/image-removebg-preview (19).png" alt="image" width="110" height="80">
+            </div>
+            <div class="photo" style="transform: translate(-75px,-53px);"><img src="/images/Missionary.png" alt="image"
+                    width="200" height="230">
+            </div>
+
+            <div class="text" style="transform: translate(-60px,106px); margin: -40px -20px;">
+                भारत सरकार | GOVERNMENT OF INDIA</div>
+
+            <div class="photo" style="transform: translate(70px,8px);"><img
+                    src="/images/360_F_576039567_dNrcK76lhaCnoR7iFGCrK6YRECLjNKgv.png" alt="image" width="110"
+                    height="90">
+            </div>
+            <div class="photo" style="transform: translate(19px,-7px);"><img
+                    src="/images/image-removebg-preview (20).png" alt="image" width="150" height="120">
+            </div>
+            <div class="photo" style="transform: translate(-50px,10px);"><img
+                    src="/images/image-removebg-preview (26).png" alt="image" width="160" height="80">
+            </div>
+        </div>
+
+    </header>
+    <header class="head"
+        style="display: flex; justify-content: space-between; align-items: center; background-color: #98ff67;">
+        <nav>
+            <ul style="display: flex; list-style: none;">
+                <li><a href="/profile">Home</a></li>
+                <li><a href="/feed">Feed</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a style="text-decoration: none; color: black;" href="/contact" <i id="phone" class="fas fa-phone"></i></a>
+            <a style="text-decoration: none; color: black;" href="/account" <i id="user" class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="transform: translate(520px,60px); width: fit-content; font-size: 34px;">Government Schemes</h1>
+        <p style="width: 50%; margin: 100px auto; text-align: center;">Stay informed about the latest Government Schemes tailored for farmers on our platform. Explore the diverse range of initiatives designed to enhance agricultural productivity, provide financial support, and improve the livelihoods of farmers. Stay ahead with our curated collection of schemes aimed at empowering the farming community.</p>
+        <div class="blog-container">
+            <div class="blog-post">
+                <img src="https://agronicfood.com/wp-content/uploads/2020/02/0-4.png" alt="Blog 1" width="250px">
+
+                <div class="blog-text">
+                    <p>Agri Infra Fund launched under Atmanirbhar Bharat Package to address infrastructure gaps in
+                        agriculture.
+
+                        Aims to transform the agricultural infrastructure landscape.
+
+                        Provides medium to long-term debt financing for post-harvest management and community farming
+                        assets.
+
+                        Fund of Rs 1 lakh crore disbursed from FY 2020-21 to FY 2025-26.
+
+                        Support provided until FY 2032-2033.</p>
+                    <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=1946806">Read More..</a>
+                </div>
+
+            </div>
+            <div class="blog-post">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Woman_at_work%2C_Gujarat.jpg" alt="Blog 2"
+                    width="250px">
+
+                <div class="blog-text">
+                    <p>Central Sector Scheme (CSS) for "Formation and Promotion of 10,000 Farmer Producer Organizations
+                        (FPOs)"
+                        launched by Government of India in 2020.
+
+                        Total budgetary outlay of Rs 6865 crores.
+
+                        FPOs formed and promoted through Implementing Agencies (IAs) and Cluster Based Business
+                        Organizations (CBBOs).
+
+                        FPOs receive financial assistance up to Rs 18 lakh per FPO for 3 years.</p>
+                    <a href="https://sansad.in/getFile/annex/258/AU348.pdf?source=pqars">Read More..</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="https://images.livemint.com/img/2021/03/07/1600x900/LSpic_1615133040221_1615133049722.jpg"
+                    alt="Blog 2" width="250px">
+                <div class="blog-text">
+                    <p>Available to farmers for crop husbandry, animal husbandry, dairying, and fisheries.
+
+                        Short-term crop loans up to Rs 3 lakh at 7% interest per annum.
+
+                        Additional 3% subvention for prompt loan repayment, reducing effective interest to 4%.
+
+                        Benefit extended to post-harvest loans against Negotiable Warehouse Receipts (NWRs).</p>
+
+                    <a href="https://vikaspedia.in/agriculture/agri-credit/interest-subvention-scheme-for-farmers">Read More..</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="https://www.villagesquare.in/wp-content/uploads/2021/04/pexels-sajals-gallery-7415330-scaled.jpg"
+                    alt="Blog 2" width="250px">
+                <div class="blog-text">
+                    <p>Recognizing the significance of beekeeping, the Government introduced a new Central Sector Scheme
+                        named the
+                        National Beekeeping & Honey Mission (NBHM) in 2020 as part of the Atmanirbhar Bharat Abhiyan.
+                        The scheme
+                        aims to promote and advance scientific beekeeping to realise the objective of a "Sweet
+                        Revolution."
+                        Here are some of the achievements</p>
+
+                    <a href="https://timesofindia.indiatimes.com/india/empowering-indias-farmers-list-of-schemes-for-welfare-of-farmers-in-india/articleshow/107854121.cms">Read More..</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="https://iffco-public-assets.s3.ap-south-1.amazonaws.com/s3fs-public/2020-08/Initiatives%20for%20Farmers.jpg"
+                    alt="Blog 2" width="250px">
+                <div class="blog-text">
+                    <p>PMFBY launched in 2016 for comprehensive crop insurance against non-preventable natural risks.
+
+                        Aims to provide simple and affordable crop insurance to farmers.
+
+                        Covers risks from pre-sowing to post-harvest.
+
+                        Available for all farmers and demand-driven.
+
+                        5549.40 lakh farmer applications insured since 2016-17.
+                    </p>
+
+                    <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2002012">Read More..</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="https://media.istockphoto.com/id/1205325344/photo/farmer-in-agricultural-field.jpg?s=612x612&w=0&k=20&c=krsRk4T2MsmMy6PmrpPDR0i_1ja3_jQaNl80fBejWck="
+                    alt="Blog 2" width="250px">
+
+                <div class="blog-text">
+                    <p>PMKMY launched on September 12, 2019, to provide security to vulnerable farmer families.
+
+                        Contributory scheme for small and marginal farmers (SMFs) aged 18 to 40.
+
+                        Members pay monthly subscriptions to the Pension Fund, matched by the Central Government.
+
+                        Monthly contributions range from Rs 55 to Rs 200 until age 60.
+
+                        Provides Rs 3,000 monthly pension to enrolled farmers at age 60.</p>
+
+                    <a href="https://timesofindia.indiatimes.com/india/empowering-indias-farmers-list-of-schemes-for-welfare-of-farmers-in-india/articleshow/107854121.cms">Read More..</a>
+                </div>
+            </div>
+            <!-- Repeat the above blog-post structure for the remaining blogs -->
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <h3>AGRI CONNECT</h3>
+            <p>Agri Connect is a platform that directly connects farmers with consumers, revolutionizing the
+                agricultural supply chain. It promotes transparency, fair pricing, and sustainable practices.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p style="color: white;">copyright &copy; <a href="/account">Agri Connect</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="/profile">Home</a></li>
+                    <li><a href="/feed">Feed</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

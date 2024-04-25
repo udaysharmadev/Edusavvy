@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edusavvy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        background-color: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        scroll-behavior: smooth;
+    }
+
+    main {
+        flex: 1;
+        /* Your main content styles */
+    }
+
+    footer {
+        background-color: #333;
+
+        margin-top: auto;
+    }
+
+    .text-gradient {
+        background-image: linear-gradient(to bottom right, #4299e1, #1a202c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .dark body {
+            background-color: #040913;
+            color: white;
+        }
+
+        .dark main h1 {
+            color: white;
+        }
+
+        .dark main p {
+            color: rgb(206, 206, 206);
+        }
+
+        .dark main h2 {
+            color: black;
+        }
+
+        .dark footer p {
+            color: rgb(206, 206, 206);
+        }
+        .dark footer li{
+            color: rgb(110, 110, 110);
+        }
+
+        .dark footer {
+            background-color: #01061b;
+            color: white;
+        }
+
+        .dark #arr {
+            filter: invert(100%);
+        }
+
+        #sun {
+            display: none;
+        }
+
+        .dark #moon {
+            display: none;
+        }
+
+        .dark #sun {
+            display: block;
+        }
+
+        .dark .mtopic #b{
+            color: black;
+        }
+
+        .dark .value h2{
+            color: white;
+        }
+
+        .dark .template p{
+            color: rgb(156, 156, 156);
+        }
+</style>
+
+<body>
+    <header>
+        <nav class="flex justify-between items-center px-16 py-4">
+            <div class="logo">
+                <a href="/profile"><img src="/images/logo.png" alt="" style="width: 165px;"></a>
+            </div>
+
+            <ul class="flex">
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/profile">Home</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/courses">Courses</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/feed">Feed</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/buysell">Buy & Sell</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/about">About</a></li>
+                <li class="font-semibold text-lg hover:text-blue-600"><a href="/contact">Contact Us</a></li>
+            </ul>
+
+            <div class="right flex justify-between items-center">
+
+                <button id="darkModeToggle" class="dl mr-5 text-2xl"><i id="moon" class="ri-moon-fill"></i><i
+                        class="ri-sun-fill" id="sun"></i></button>
+
+                <button class="font-semibold text-lg bg-blue-600 text-white py-2 px-3 rounded-3xl"><a
+                        href="/account">Dashboard <i class="ri-user-fill font-light"></i></a></button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="mb-10 mt-10">
+
+        <div class="mtopic flex w-full flex-row justify-around">
+            <div class="left w-1/2 ml-20">
+                <h1 class="text-5xl font-bold" style="line-height: 1.2; word-spacing: 1px; width: 85%;">Mastering Git
+                    and GitHub: The Version Control and Collaboration Essentials</h1>
+                <div class="btns flex justify-between mt-7" style="width: 85%;">
+                    <button id="b" class="bg-white text-lg rounded-xl px-4 py-1 font-semibold shadow-md">Open-Source
+                        💻</button>
+                    <button id="b" class="bg-white text-lg rounded-xl px-4 py-1 font-semibold shadow-md">Contribute 👥</button>
+                    <button id="b" class="bg-white text-lg rounded-xl px-4 py-1 font-semibold shadow-md"> Free hosting
+                        🚀</button>
+                </div>
+                <div class="value flex flex-row items-center mt-6 ml-1">
+                    <h2 class="text-2xl mr-10 font-semibold">Price Value</h2>
+                    <p class="text-2xl font-bold text-gradient">₹0</p>
+                </div>
+                <div class="more ml-1 mt-6"><a href="#rm"><button
+                            class="bg-gradient-to-br from-blue-700 to-blue-400 text-white px-10 py-2 rounded-xl text-xl font-semibold">Read
+                            More 👇</button></a></div>
+
+                <div class="boxee flex flex-row mt-20 ml-1 items-center">
+                    <p class="text-lg font-light mr-16"><i class="ri-earth-fill"></i><span class="font-semibold">
+                            Language:</span> Hindi</p>
+                    <p class="text-lg font-light mr-16"><i class="ri-time-fill"></i><span class="font-semibold">
+                            Duration:</span> 1 Hour 51 Mins</p>
+                </div>
+                <div class="freetemp ml-1 mt-10"><button
+                        class="bg-gradient-to-br from-red-500 to-yellow-500 text-white px-7 py-3 rounded-xl font-semibold">Download
+                        Github Template <i class="ri-file-download-fill font-medium"></i></button></div>
+            </div>
+            <div class="right w-1/2">
+                <iframe class="rounded-2xl" width="560" height="420"
+                    src="https://www.youtube.com/embed/RDxQEzXN8AU?autoplay=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div class="noth text-gray-100" id="rm" style="transform: translate(-100px,50px);">a</div>
+
+
+        <div class="temphead ml-24 mt-24">
+            <p class="text-xl text-gray-600 font-semibold">Free Github Readme Templates</p>
+            <h1 class="text-4xl font-bold">Just<span class="text-gradient"> Copy Paste</span> and edit</h1>
+        </div>
+
+
+        <div class="template grid grid-cols-3 gap-10 px-24 mt-10">
+            <div class="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="bg-contain bg-center h-60 bg-no-repeat" style="background-image: url('/images/g1.png');">
+                </div>
+                <div class="p-4 mb-3">
+                    <h2 class="text-2xl font-bold">Readme Generator</h2>
+                    <p class="text-gray-600 mt-2 mb-4">The simple, centered header draws the reader’s eye to your name,
+                        ensuring hiring managers remember you.</p>
+                    <a class="bg-blue-600 text-white rounded-lg px-4 py-3"
+                        href="https://rahuldkjain.github.io/gh-profile-readme-generator/">Visit
+                        Website</a>
+                </div>
+            </div>
+
+            <div class="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="bg-contain bg-no-repeat bg-center h-60"
+                    style="background-image: url('/images/g2.png'); overflow-y: hidden;"></div>
+                <div class="p-4 mb-3">
+                    <h2 class="text-2xl font-bold">Profile Readme Generator</h2>
+                    <p class="text-gray-600 mt-2 mb-4">Tailored for managerial-level professionals, this resume template
+                        for Word features a sleek, modern design</p>
+                    <a class="bg-blue-600 text-white rounded-lg px-4 py-3"
+                        href="https://profile-readme-generator.com/">Visit
+                        Website</a>
+                </div>
+            </div>
+
+            <div class="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="bg-contain bg-center h-60 bg-no-repeat" style="background-image: url('/images/g3.png');">
+                </div>
+                <div class="p-4 mb-3">
+                    <h2 class="text-2xl font-bold">readme.so</h2>
+                    <p class="text-gray-600 mt-2 mb-4">Need something that immediately sets you apart from other
+                        candidates? The “Pretty” template for MS Word.</p>
+                    <a class="bg-blue-600 text-white rounded-lg px-4 py-3" href="https://readme.so/editor">Visit
+                        Website</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-white flex flex-row items-center px-24 pb-20 pt-12 justify-between">
+        <div class="mt-3">
+            <img class="-ml-6" src="/images/logo.png" alt="" width="220px">
+            <div class="botm">
+                <p class="text-gray-600 mt-5">© Edusavvy - Empowering Education</p>
+                <p class="text-gray-600"><a href="">Terms Of Service</a> | <a href="">Privacy Policy</a></p>
+            </div>
+        </div>
+        <div>
+            <h1 class="text-xl font-bold mb-3 mt-14">Services</h1>
+            <ul>
+                <li class="text-gray-600 mb-1">Courses</li>
+                <li class="text-gray-600 mb-1">Buy & Sell</li>
+                <li class="text-gray-600 mb-1">Notes</li>
+                <li class="text-gray-600 mb-1">Study Material</li>
+            </ul>
+        </div>
+        <div>
+            <h1 class="text-xl font-bold mb-3 mt-14  mr-6">About Us</h1>
+            <ul class="-mb-1">
+                <li class="text-gray-600 mb-1">Who are we?</li>
+                <li class="text-gray-600 mb-1">About</li>
+                <li class="text-gray-600 mb-1">Career</li>
+                <li class="text-gray-600 mb-1">Contact us</li>
+            </ul>
+        </div>
+        <div>
+            <h1 class="text-xl font-bold mb-3 mt-8">Account</h1>
+            <ul class="-mb-1">
+                <li class="text-gray-600 mb-1">Dashboard</li>
+                <li class="text-gray-600 mb-1">Feed</li>
+                <li class="text-gray-600 mb-1">Users</li>
+            </ul>
+        </div>
+        <div>
+            <div class="ending mt-4">
+                <h1 class="text-xl font-bold mb-3">Get in touch</h1>
+                <p class="text-gray-600 mb-1">Questions or feedback? <br> we'd love to hear from you</p>
+            </div>
+            <div class="socials mt-7 -mb-12">
+                <i class="ri-youtube-fill text-2xl mr-2"></i>
+                <i class="ri-instagram-fill text-2xl mr-2"></i>
+                <i class="ri-twitter-x-line text-2xl mr-2"></i>
+                <i class="ri-facebook-circle-fill text-2xl mr-2"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            const html = document.documentElement;
+
+            // Toggle the 'dark' class on the <html> element
+            html.classList.toggle('dark');
+
+            // Save the user's preference in localStorage
+            const isDarkMode = html.classList.contains('dark');
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Check if the user has a dark mode preference saved in localStorage
+        const savedDarkMode = localStorage.getItem('darkMode');
+        if (savedDarkMode === 'true') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</body>
+
+</html>

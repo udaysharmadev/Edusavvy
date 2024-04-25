@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<style>
+    .dark body {
+            background-color: #040913;
+            color: white;
+        }
+
+        .dark main h1 {
+            color: white;
+        }
+
+        .dark main p {
+            color: rgb(206, 206, 206);
+        }
+
+        .dark main h2 {
+            color: black;
+        }
+
+        .dark footer p {
+            color: rgb(206, 206, 206);
+        }
+        .dark footer li{
+            color: rgb(110, 110, 110);
+        }
+
+        .dark footer {
+            background-color: #01061b;
+            color: white;
+        }
+
+        .dark #arr {
+            filter: invert(100%);
+        }
+
+        #sun {
+            display: none;
+        }
+
+        .dark #moon {
+            display: none;
+        }
+
+        .dark #sun {
+            display: block;
+        }
+</style>
+<body>
+    <header>
+        <nav class="flex justify-between items-center px-16 py-4">
+            <div class="logo">
+                <a href="/profile"><img src="/images/logo.png" alt="" style="width: 165px;"></a>
+            </div>
+
+            <ul class="flex">
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/profile">Home</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/courses">Courses</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/feed">Feed</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/buysell">Buy & Sell</a></li>
+                <li class="mr-7 font-semibold text-lg hover:text-blue-600"><a href="/about">About</a></li>
+                <li class="font-semibold text-lg hover:text-blue-600"><a href="/contact">Contact Us</a></li>
+            </ul>
+
+            <div class="right flex justify-between items-center">
+
+                <button id="darkModeToggle" class="dl mr-5 text-2xl"><i id="moon" class="ri-moon-fill"></i><i class="ri-sun-fill" id="sun"></i></button>
+
+                <button class="font-semibold text-lg bg-blue-600 text-white py-2 px-3 rounded-3xl"><a
+                        href="/account">Dashboard <i class="ri-user-fill font-light"></i></a></button>
+            </div>
+        </nav>
+    </header>
+
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+darkModeToggle.addEventListener('click', () => {
+    const html = document.documentElement;
+
+    // Toggle the 'dark' class on the <html> element
+    html.classList.toggle('dark');
+
+    // Save the user's preference in localStorage
+    const isDarkMode = html.classList.contains('dark');
+    localStorage.setItem('darkMode', isDarkMode);
+});
+
+// Check if the user has a dark mode preference saved in localStorage
+const savedDarkMode = localStorage.getItem('darkMode');
+if (savedDarkMode === 'true') {
+    document.documentElement.classList.add('dark');
+}
+    </script>
+</body>
+</html>
